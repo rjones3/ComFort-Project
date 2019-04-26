@@ -34,7 +34,6 @@ class productSingle extends React.Component {
 
         return (
             <>
-                <h1>Products Here!</h1>
                 <div key={product.id}>
                     <img src={`/images/Products/${product.product_slug}.jpg`} width="400" />
                 </div>

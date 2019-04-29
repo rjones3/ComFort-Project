@@ -627,3 +627,124 @@
         color: #555;
     }
 }
+/* Product Single Page */
+
+.product-single-bg {
+    position: relative;
+    height: 680px;
+}
+.product-single-fr {
+    margin-top: 50px;
+}
+.product-single-ds {
+    text-align: center;
+    font-size: 18px;
+    color: #374759;
+}
+.product-single-ds h1 {
+    font-size: 45px;
+}
+.product-single-buy {
+    font-size: 20px;
+    text-align: center;
+}
+.product-single-buy a {
+    padding: 10px 20px;
+    color: #374759;
+    border: solid 1px #374759;
+    text-decoration: none;
+}
+.product-single-buy a:last-child {
+    padding: 10px 32px;
+} 
+.product-single-buy a:hover {
+    background-color: #f59505;
+    transition: background .2s ease-in;
+    border: 1px solid #f59505;
+    color: white;
+}
+@media (min-width: 768px) {
+
+    .product-single-bg {
+        position: relative;
+        height: 450px;
+    }
+    .product-single-fr {
+        margin-top: 50px;
+    }
+    .product-single-ds {
+        margin-top: 50px;
+        text-align: center;
+        /* padding-bottom: 180px; */
+        font-size: 18px;
+        color: #374759;
+    }
+    .product-single-ds h1 {
+        font-size: 45px;
+    }
+    .product-single-buy {
+        font-size: 20px;
+        text-align: center;
+    }
+    .product-single-buy a {
+        padding: 10px 20px;
+        color: #374759;
+        border: solid 1px #374759;
+        text-decoration: none;
+    }
+    .product-single-buy a:last-child {
+        padding: 10px 32px;
+    } 
+    .product-single-buy a:hover {
+        background-color: #f59505;
+        transition: background .2s ease-in;
+        border: 1px solid #f59505;
+        color: white;
+    }
+}
+@media (min-width: 1024px) {
+    .product-single-bg {
+        position: relative;
+        height: 550px;
+    }
+    .product-single-fr {
+        margin-top: 50px;
+    }
+}
+@media (min-width: 1440px) {
+    .product-single-bg {
+        position: relative;
+        height: 600px;
+    }
+    .product-single-fr {
+        margin-top: 50px;
+    }
+    .product-single-ds {
+        margin-top: 100px;
+        text-align: center;
+        font-size: 18px;
+        color: #374759;
+    }
+    .product-single-ds h1 {
+        font-size: 45px;
+    }
+    .product-single-buy {
+        font-size: 20px;
+        text-align: center;
+    }
+    .product-single-buy a {
+        padding: 10px 20px;
+        color: #374759;
+        border: solid 1px #374759;
+        text-decoration: none;
+    }
+    .product-single-buy a:last-child {
+        padding: 10px 32px;
+    } 
+    .product-single-buy a:hover {
+        background-color: #f59505;
+        transition: background .2s ease-in;
+        border: 1px solid #f59505;
+        color: white;
+    }
+}

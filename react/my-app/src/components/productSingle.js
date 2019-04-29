@@ -34,8 +34,27 @@ class productSingle extends React.Component {
 
         return (
             <>
-                <div key={product.id}>
-                    <img src={`/images/Products/${product.product_slug}.jpg`} width="400" />
+                <div className="product-single-bg">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-6">
+                                <div className="product-single-fr" key={product.id}>
+                                    <img src={`/images/Products/${product.product_slug}.jpg`} width="500" />
+                                </div>
+                            </div>
+                            <div className="col-sm-6">
+                                <div className="product-single-ds">
+                                    <h1>{product.product_name}</h1>
+                                    <p>{product.price}</p>
+                                    <p>{product.product_desc}</p>
+                                </div>
+                                <div className="product-single-buy">
+                                    <a href="#link">Add to Cart</a>
+                                    <a href="#link">Buy Now</a>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
                 </div>
             </>
         )

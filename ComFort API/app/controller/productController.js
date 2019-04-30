@@ -27,13 +27,10 @@ class ProductController {
         let product = new Product();
         // console.log(req.body);
         product.id = req.body.id;
-        product.productname = req.body.productname;
-        product.password = req.body.password;
-        product.fname = req.body.fname;
-        product.lname = req.body.lname;
-        product.dob = req.body.dob;
-        product.phone = req.body.phone;
-        product.email = req.body.email;
+        product.product_name = req.body.product_name;
+        product.price = req.body.price;
+        product.product_slug = req.body.product_slug;
+        product.product_desc = req.body.product_desc;
 
         return this.productDao.create(product)
             .then(this.common.findSuccess(res))
@@ -43,13 +40,10 @@ class ProductController {
     update(req, res) {
         let product = new Product();
         product.id = req.body.id;
-        product.productname = req.body.productname;
-        product.password = req.body.password;
-        product.fname = req.body.fname;
-        product.lname = req.body.lname;
-        product.dob = req.body.dob;
-        product.phone = req.body.phone;
-        product.email = req.body.email;
+        product.product_name = req.body.product_name;
+        product.price = req.body.price;
+        product.product_slug = req.body.product_slug;
+        product.product_desc = req.body.product_desc;
 
         return this.productDao.create(product)
             .then(this.common.findSuccess(res))

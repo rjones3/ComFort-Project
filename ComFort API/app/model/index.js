@@ -24,11 +24,12 @@ class Payments {
 }
 
 class Product {
-    constructor(id, product_name, price, product_slug) {
+    constructor(id, product_name, price, product_slug, product_desc) {
         this.id = id;
         this.product_name = product_name;
         this.price = price;
         this.product_slug = product_slug;
+        this.product_desc = product_desc;
     }
 }
 

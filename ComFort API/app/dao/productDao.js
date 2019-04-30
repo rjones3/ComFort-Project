@@ -16,7 +16,8 @@ class ProductDao {
                         row.id,
                         row.product_name,
                         row.price,
-                        row.product_slug
+                        row.product_slug,
+                        row.product_desc
                     )
                 );
             }
@@ -35,7 +36,8 @@ class ProductDao {
                         row.id,
                         row.product_name,
                         row.price,
-                        row.product_slug
+                        row.product_slug,
+                        row.product_desc
                     )
                 );
             }
@@ -43,34 +45,29 @@ class ProductDao {
         });
     }
 
-    create(Products) {
-        let sqlRequest = "INSERT into Products (username, password, fname, lname, dob, phone, email) " + "VALUES ($username, $password, $fname, $lname, $dob, $phone, $email)";
+    create(products) {
+        let sqlRequest = "INSERT into products (product_name, price, product_slug, product_desc) " + "VALUES ($product_name, $price, $product_slug, $product_desc)";
 
         let sqlParams = {
 
-            $username: Products.username,
-            $password: Products.password,
-            $fname: Products.fname,
-            $lname: Products.lname,
-            $dob: Products.dob,
-            $phone: Products.phone,
-            $email: Products.email
+            $product_name: products.product_name,
+            $price: price,
+            $product_slug: product_slug,
+            $product_desc: product_desc
+            
         };
         return this.common.run(sqlRequest, sqlParams);
     };
 
-    update(Products) {
-        let sqlRequest = "UPDATE Products SET id=$id, fname=$fname, lname=$lname, dob=$dob, phone=$phone, email=$email";
+    update(products) {
+        let sqlRequest = "UPDATE products SET id=$id, product_name=$product_name, price=$price, product_slug=$product_slug, product_desc=$product_desc";
 
         let sqlParams = {
-            $id: Products.id,
-            $username: Products.username,
-            $password: Products.password,
-            $fname: Products.fname,
-            $lname: Products.lname,
-            $dob: Products.dob,
-            $phone: Products.phone,
-            $email: Products.email
+            $id: products.id,
+            $product_name: products.product_name,
+            $price: price,
+            $product_slug: product_slug,
+            $product_desc: product_desc
         };
         return this.common.run(sqlRequest, sqlParams);
     };

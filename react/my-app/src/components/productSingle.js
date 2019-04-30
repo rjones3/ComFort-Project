@@ -39,7 +39,7 @@ class productSingle extends React.Component {
                         <div className="row">
                             <div className="col-sm-6">
                                 <div className="product-single-fr" key={product.id}>
-                                    <img className="img-responsive" src={`/images/Products/${product.product_slug}.jpg`} height="500" width="500" />
+                                    <div className="img-responsive product-img" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
                                 </div>
                             </div>
                             <div className="col-sm-6">

@@ -17,7 +17,8 @@ class ProductDao {
                         row.product_name,
                         row.price,
                         row.product_slug,
-                        row.product_desc
+                        row.product_desc,
+                        row.room
                     )
                 );
             }
@@ -37,7 +38,29 @@ class ProductDao {
                         row.product_name,
                         row.price,
                         row.product_slug,
-                        row.product_desc
+                        row.product_desc,
+                        row.room
+                    )
+                );
+            }
+            return users;
+        });
+    }
+
+    findByRoom(room) {
+        let sqlRequest = "SELECT * FROM products WHERE room  = '" + room + "'";
+        
+        return this.common.findAll(sqlRequest).then(rows => {
+            let users = [];
+            
+            for (const row of rows) {
+                users.push(new Product(
+                        row.id,
+                        row.product_name,
+                        row.price,
+                        row.product_slug,
+                        row.product_desc,
+                        row.room
                     )
                 );
             }
@@ -46,28 +69,30 @@ class ProductDao {
     }
 
     create(products) {
-        let sqlRequest = "INSERT into products (product_name, price, product_slug, product_desc) " + "VALUES ($product_name, $price, $product_slug, $product_desc)";
+        let sqlRequest = "INSERT into products (product_name, price, product_slug, product_desc, room) " + "VALUES ($product_name, $price, $product_slug, $product_desc, $room)";
 
         let sqlParams = {
 
             $product_name: products.product_name,
             $price: price,
             $product_slug: product_slug,
-            $product_desc: product_desc
+            $product_desc: product_desc,
+            $room: room
             
         };
         return this.common.run(sqlRequest, sqlParams);
     };
 
     update(products) {
-        let sqlRequest = "UPDATE products SET id=$id, product_name=$product_name, price=$price, product_slug=$product_slug, product_desc=$product_desc";
+        let sqlRequest = "UPDATE products SET id=$id, product_name=$product_name, price=$price, product_slug=$product_slug, product_desc=$product_desc, room=$room";
 
         let sqlParams = {
             $id: products.id,
             $product_name: products.product_name,
             $price: price,
             $product_slug: product_slug,
-            $product_desc: product_desc
+            $product_desc: product_desc,
+            $room: room
         };
         return this.common.run(sqlRequest, sqlParams);
     };

@@ -16,6 +16,10 @@ router.get("/:id", function (req, res) {
     productcontroller.findOne(req, res);
 });
 
+router.get("/room/:room", function (req, res) {
+    productcontroller.findByRoom(req, res);
+});
+
 router.post('/create', function (req, res) {
     productcontroller.create(req, res);
 });

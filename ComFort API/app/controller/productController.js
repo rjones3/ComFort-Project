@@ -23,6 +23,13 @@ class ProductController {
             .catch(this.common.findError(res))
     }
 
+    findByRoom(req, res) {
+        let room = req.params.room;
+        this.productDao.findByRoom(room)
+            .then(this.common.findSuccess(res))
+            .catch(this.common.findError(res))
+    }
+
     create(req, res) {
         let product = new Product();
         // console.log(req.body);
@@ -31,6 +38,7 @@ class ProductController {
         product.price = req.body.price;
         product.product_slug = req.body.product_slug;
         product.product_desc = req.body.product_desc;
+        product.room = req.body.room;
 
         return this.productDao.create(product)
             .then(this.common.findSuccess(res))
@@ -44,6 +52,7 @@ class ProductController {
         product.price = req.body.price;
         product.product_slug = req.body.product_slug;
         product.product_desc = req.body.product_desc;
+        product.room = req.body.room;
 
         return this.productDao.create(product)
             .then(this.common.findSuccess(res))

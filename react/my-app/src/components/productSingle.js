@@ -9,7 +9,6 @@ class productSingle extends React.Component {
                 id: '',
                 product_name: '',
                 product_slug: '',
-                product_desc
             }
         }
     }

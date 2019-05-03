@@ -47,10 +47,11 @@ class RoomSingle extends React.Component {
             return (
                 <div key={product.id} className="room-slide">
                     <div className="room-product-pic" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
-                    <a href={`product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</a>
+                    <a href={`../product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</a>
                 </div>
             )
         })
+
 
         const heroBack = {
             className: 'slider-back',
@@ -108,7 +109,7 @@ class RoomSingle extends React.Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="room-back">
-                                <a href="#link"><Link to="/Products"> BACK <i className="fas fa-chevron-right"></i></Link></a>
+                                <a href="/Products">BACK <i className="fas fa-chevron-right"></i></a>
                             </div>
                         </div>
                     </div>

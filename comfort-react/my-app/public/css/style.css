@@ -628,7 +628,7 @@
 
 .product-single-bg {
     position: relative;
-    height: 680px;
+    height: 750px;
     padding-top: 50px;
 }
 .product-img {
@@ -669,11 +669,25 @@
     border: 1px solid #f59505;
     color: white;
 }
+.product-single-back a {
+    display: block;
+    margin: 30px auto;
+    background-color: white;  
+    margin-bottom: 30px;
+    width: 250px;
+    text-align: center;
+    text-decoration: none;
+    color: #222e3b;
+}
+.product-single-back a:hover {
+    text-decoration: underline;
+}
+
 @media (min-width: 768px) {
 
     .product-single-bg {
         position: relative;
-        height: 520px;
+        height: 540px;
     }
     .product-img {
         background-size: contain;

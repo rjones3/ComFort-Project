@@ -52,6 +52,9 @@ class productSingle extends React.Component {
                                     <a href="#link">Add to Cart</a>
                                     <a href="#link">Buy Now</a>
                                 </div>
+                                <div className="product-single-back">
+                                    <a href="/Products">BACK <i className="fas fa-chevron-right"></i></a>
+                                </div>
                             </div>  
                         </div>
                     </div>

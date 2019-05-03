@@ -774,3 +774,104 @@
         color: white;
     }
 }
+
+/* Room Single */
+.room-single-bg {
+    background-color: #ccc;
+}
+.all-prod-cont {
+    background-color: white;
+    margin-bottom: 30px;
+    box-shadow: 5px 5px 5px #999;   
+}
+.room-header {
+    background-color: white;
+    box-shadow: 5px 5px 5px #999; 
+    height: 50px;
+    text-align: center;
+}
+.room-header h2 {
+    padding-top: 10px;
+    font-size: 35px;
+}
+.room-slide {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    width: 100%;
+    text-align: center;
+    overflow: hidden;
+    display: inline-block;
+}
+.room-slide a {
+    text-decoration: none;
+    color: #555;
+    font-weight: bold;
+}
+.room-product-pic {
+    margin-bottom: 20px;
+    height: 175px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    transition: transform .5s;
+    overflow: hidden;
+}
+.room-product-pic:hover {
+    transform: scale(1.1);
+}
+.room-back {
+    display: block;
+    margin: 0 auto;
+    background-color: white;
+    box-shadow: 5px 5px 5px #999;   
+    margin-bottom: 30px;
+    width: 250px;
+    text-align: center;
+}
+.room-back a {
+    font-size: 25px;
+    text-decoration: none;
+    color: #555;
+    transition: .5s;
+}
+.room-back a:hover {
+    color: #222e3b;
+}
+
+@media (min-width: 768px) {
+    .room-slide {
+        width: 32%;
+    }
+    .room-header {
+        background-color: white;
+        box-shadow: 5px 5px 5px #999; 
+        height: 50px;
+        width: 30%;
+        text-align: center;
+    }
+    .room-header h2 {
+        padding-top: 10px;
+        font-size: 30px;
+    }
+}
+@media (min-width: 1440px) {
+    .room-slide {
+        padding-top: 40px;
+        padding-bottom: 40px;
+        width: 24%;
+        text-align: center;
+        overflow: hidden;
+        display: inline-block;
+    }   
+    .room-header {
+        background-color: white;
+        box-shadow: 5px 5px 5px #999; 
+        height: 50px;
+        width: 25%;
+        text-align: center;
+    }
+    .room-header h2 {
+        padding-top: 10px;
+        font-size: 35px;
+    }
+}

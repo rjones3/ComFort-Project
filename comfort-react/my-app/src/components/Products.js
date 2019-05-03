@@ -126,19 +126,19 @@ class Products extends React.Component {
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Dining Room</a>
+                                <a href="/room/diningroom">Dining Room</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/diningroombg.jpg')"}}></div>    
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Bedroom</a>
+                                <a href="/room/bedroom">Bedroom</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/bedroom.jpg')"}}></div>
                             </div>     
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Outdoors</a>
+                                <a href="/room/outdoor">Outdoors</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/outdoorbg.jpg')"}}></div>
                             </div>
                         </div>

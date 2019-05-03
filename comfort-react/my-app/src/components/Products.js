@@ -1,13 +1,33 @@
 import React from 'react'
 import Slider from "react-slick";
 
+
+function searchingfor(term) {
+    return function(product) {
+        return term && product.product_name.toLowerCase().includes(term)
+    }
+}
+
 class Products extends React.Component {
     
     constructor() {
         super();
         this.state = {
-            products: []
+            products: [],
+            searchinput: '',
+            searchResults: []
         }
+        this.searchfor = this.searchfor.bind(this);
+    }
+
+    searchfor(event) {
+        let searchinput = event.target.value.toLowerCase()
+        let searchResults = this.state.products.filter( searchingfor(searchinput) )
+        this.setState({
+            searchinput: event.target.value,
+            searchResults
+        })
+
     }
 
     componentDidMount() {
@@ -28,6 +48,12 @@ class Products extends React.Component {
                 </div>
             )
         })
+
+        let searchResults = this.state.searchResults.map( product =>
+            <div key={product.id}>
+                <a href={`product/${product.product_slug}`}>{product.product_name}</a>
+            </div>
+        )
 
         const heroBack = {
             className: 'slider-back',
@@ -92,9 +118,10 @@ class Products extends React.Component {
                     <div className="col-sm-12">
                         <div className="search-container">
                             <div className="search-bar">
-                                <input type="text" placeholder="Search Here" />
+                                <input type="text" placeholder="Search Here" value={this.state.searchinput} onChange={this.searchfor}  />
                                 <a href="#link"><i className="fas fa-search"></i></a>  
                             </div>
+                            <div className="search-bar-results">{searchResults}</div>
                         </div>
                     </div>
                 </div>

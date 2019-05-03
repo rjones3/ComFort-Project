@@ -1,17 +1,33 @@
 import React from 'react'
 import Slider from "react-slick";
 
-class Products extends React.Component {
+class RoomSingle extends React.Component {
     
     constructor() {
         super();
         this.state = {
-            products: []
+            products: [],
+            room: ''
         }
     }
 
     componentDidMount() {
-        fetch('http://localhost:5000/api/product/')
+        console.log(this.props.match.params.name);
+        let name = this.props.match.params.name
+        let room = ''
+        switch (name) {
+            case 'livingroom':
+                room = 'Living Room'
+                break;
+            case 'livingroom':
+                room = 'Living Room'
+                break;
+        
+            default:
+                break;
+        }
+        this.setState({room})
+        fetch(`http://localhost:5000/api/product/room/${name}`)
         .then(results => results.json())
         .then(data => {
             this.setState({products: data});
@@ -120,59 +136,34 @@ class Products extends React.Component {
                     <div className="row">
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Living Room</a>
+                                <a href="#link">Living Room</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/livingroombg.jpg')"}}></div>
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Dining Room</a>
+                                <a href="#link">Dining Room</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/diningroombg.jpg')"}}></div>    
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Bedroom</a>
+                                <a href="#link">Bedroom</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/bedroom.jpg')"}}></div>
                             </div>     
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Outdoors</a>
+                                <a href="#link">Outdoors</a>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/outdoorbg.jpg')"}}></div>
                             </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-sm-12">
-                            <div className="category-back-more">
-                                <Slider {...moreSlider}>
-                                    <div>
-                                        <div className="widgetbg-more" style={{backgroundImage: "url('/images/WidgetBG/officebg.jpg')"}}></div>
-                                    </div>
-                                    <div>
-                                        <div className="widgetbg-more" style={{backgroundImage: "url('/images/WidgetBG/kitchenbg.jpg')"}}></div>
-                                    </div>
-                                    <div>
-                                        <div className="widgetbg-more" style={{backgroundImage: "url('/images/WidgetBG/bathroombg.jpg')"}}></div>
-                                    </div>
-                                </Slider>
-                                <a href="#link">See More <i className="fas fa-chevron-right"></i></a>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div className="row">
-                        <div className="col-sm-12">
-                            <img className="ad-displays" src="/images/Ads/outdoorad.jpg" alt="Ad" />
                         </div>
                     </div>
             
                     <div className="row">
                         <div className="col-sm-3">
                             <div className="productbg">
-                                <a href="#link">Popular Products</a>
+                                <a href="#link">{this.state.room}</a>
                             </div>    
                         </div>
                         <div className="col-sm-12">
@@ -188,4 +179,4 @@ class Products extends React.Component {
     }
 }
 
-export default Products
+export default RoomSingle

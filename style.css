@@ -848,3 +848,18 @@
         font-size: 35px;
     }
 }
+
+/* Sign in Pages */
+.signin-bg {
+
+}
+.signin-form input:nth-child(5) {
+    background-color: white;
+    border: 1px solid #f59505;
+    color: #f59505;
+    transition: .5s;
+}
+.single-form input:hover:nth-child(5) {
+    background-color: #f59505;
+    color:white;
+}

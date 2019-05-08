@@ -949,3 +949,105 @@
         font-size: 35px;
     }
 }
+
+/* Sign in Pages */
+.signin-bg {
+    background: #ff9900cf;
+    height: 625px;
+}
+.signin-bg a {
+    color: #999;
+    text-decoration: none;
+}
+.signin-bg a:hover {
+    text-decoration: underline;
+    color: #0000FF;
+}
+.form-pos {
+    position: relative;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.form-bg {
+    display: block;
+    margin: 0 auto;
+    padding: 20px;
+    background-color: white;
+    text-align: center;
+    width: 80%;
+    box-shadow: 5px 5px 5px #f59505;
+}
+.signin-form input {
+    margin: 10px;
+    height: 50px;
+    width: 90%;
+}
+.signin-form input[type="text"] {
+    padding-left: 10px;
+    background-color: #dddddd6b;
+    border: none;
+}
+.signin-form input[type="submit"] {
+    background-color: white;
+    border: 1px solid #f59505;
+    color: #f59505;
+    transition: .5s;
+}
+.signin-form input[type="submit"]:hover {
+    background-color: #f59505;
+    color:white;
+}
+@media (min-width: 768px) {
+    .form-bg {
+        width: 50%;
+    }
+}
+@media (min-width: 1024px) {
+    /* Sign in Pages */
+    .signin-bg {
+        background: #ff9900cf;
+        height: 625px;
+    }
+    .signin-bg a {
+        color: #999;
+        text-decoration: none;
+    }
+    .signin-bg a:hover {
+        text-decoration: underline;
+        color: #0000FF;
+    }
+    .form-pos {
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    .form-bg {
+        display: block;
+        margin: 0 auto;
+        padding: 20px;
+        background-color: white;
+        text-align: center;
+        width: 33.3%;
+        box-shadow: 5px 5px 5px #f59505;
+    }
+    .signin-form input {
+        margin: 10px;
+        height: 50px;
+        width: 90%;
+    }
+    .signin-form input[type="text"] {
+        padding-left: 10px;
+        background-color: #dddddd6b;
+        border: none;
+    }
+    .signin-form input[type="submit"] {
+        background-color: white;
+        border: 1px solid #f59505;
+        color: #f59505;
+        transition: .5s;
+    }
+    .signin-form input[type="submit"]:hover {
+        background-color: #f59505;
+        color:white;
+    }
+}

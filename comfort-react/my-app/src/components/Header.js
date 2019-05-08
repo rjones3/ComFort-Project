@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 function Header() {
     return (
@@ -12,8 +13,8 @@ function Header() {
                             </div>
                             <div className="col-sm-8 col-xs-6">
                                 <ul className="nav-list-struct center-text">
-                                    <li><a>Sign Up</a></li>
-                                    <li><a>Log in</a></li>
+                                    <li><a><Link to="/SignUp">Sign Up</Link></a></li>
+                                    <li><a><Link to="/Login">Log in</Link></a></li>
                                 </ul>
                             </div>
                         </div>

@@ -10,14 +10,14 @@ function Home() {
             </div>
             <div className="video-container">
                 <iframe 
-                className="fullscreen-video-wrap" 
-                src="https://www.youtube.com/embed/WgzR0cjU2CQ?autoplay=1&loop=1&playlist=WgzR0cjU2CQ&rel=0&showinfo=0&controls=0" 
-                frameBorder="0" 
-                showinfo="0" 
-                controls="0" 
-                autohide="1" 
-                allow="autoplay" 
-                allowFullScreen>
+                    className="fullscreen-video-wrap" 
+                    src="https://www.youtube.com/embed/WgzR0cjU2CQ?autoplay=1&loop=1&playlist=WgzR0cjU2CQ&rel=0&showinfo=0&controls=0" 
+                    frameBorder="0" 
+                    showinfo="0" 
+                    controls="0" 
+                    autohide="1" 
+                    allow="autoplay" 
+                    allowFullScreen>
                 </iframe>
             </div>
         </>

@@ -16,11 +16,11 @@ function Login() {
                                     <br />
                                     <input type="text" placeholder="Password" />
                                     <br />
-                                    <input type="submit" value="LOGIN" />
+                                    <Link to="/Home"><input type="submit" value="LOGIN" /></Link>
                                     <br />
                                     <a href="#">Forgot Password?</a>
                                 </form>
-                                <p>Not registered? <a href="#link"><Link to="/SignUp">Create an Account</Link></a></p>
+                                <p>Not registered? <Link to="/SignUp">Create an Account</Link></p>
                             </div>
                         </div>
                     </div>

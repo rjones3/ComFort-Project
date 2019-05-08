@@ -13,8 +13,8 @@ function Header() {
                             </div>
                             <div className="col-sm-8 col-xs-6">
                                 <ul className="nav-list-struct center-text">
-                                    <li><a><Link to="/SignUp">Sign Up</Link></a></li>
-                                    <li><a><Link to="/Login">Log in</Link></a></li>
+                                    <li><Link to="/SignUp">Sign Up</Link></li>
+                                    <li><Link to="/Login">Log in</Link></li>
                                 </ul>
                             </div>
                         </div>

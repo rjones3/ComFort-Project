@@ -1,32 +1,13 @@
 /* https://avexdesigns.com/responsive-youtube-embed/ */
 .video-container {
-    position: relative;
-    padding-bottom: 54.25%;
-    padding-top: 30px; height: 0; overflow: hidden;
-    z-index: -3;
-}
-.video-container:after {
-    content: '';
-    position: absolute;
-    bottom: 0;
-    width: 100%;
-    height: 15px;
-    background: #222e3b;
-}
-.video-container iframe,
-.video-container object,
-.video-container embed {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    pointer-events: none;
-    z-index: -3;
+    overflow: hidden;
+    height: 800px;
+    width: 100vw;
+    z-index: -1;
 }
 .hero-intro {
     text-align: center;
-    position: absolute;
+    position: relative;
     left: 51%;
     top: 20%;
     transform: translateX(-50%) translateY(-50%);
@@ -53,8 +34,6 @@
 }
 /* Homepage Nav Bar */
 .nav-mid {
-    position: absolute;
-    top: 0;
     width: 100%;
     height: 52px;
     background-color: #374759;
@@ -77,14 +56,17 @@
     text-align: center;
 }
 .nav-list-struct a { 
-    padding: 5px 6px;
+    margin-right: 2px;
+    padding: 5px 5px;
     text-decoration: none;
     color: white;
+    border: 1px solid white;
+    transition: .5s ease-in-out;
 }
 .nav-list-struct a:hover {
     background-color: #f59505;
+    border: 1px solid #f59505;
     color: white;
-    transition: background .3s ease-in;
 }
 
 @media (min-width: 768px) {
@@ -117,7 +99,8 @@
         box-shadow: 0px 0px 5px #999;
     }
     .nav-list-struct a { 
-        padding: 15px 10px;
+        margin-right: 15px;
+        padding: 15px 15px;
         float: right;
         text-decoration: none;
         color: white;
@@ -154,15 +137,14 @@
     border-bottom: 1px solid #131921;
     z-index: 1;
 }
-@media (max-width: 425px) {
-    .footer-back-home {
-        padding-top: 20px;
-        background-color: #222e3b;
-        width: 100%;
-        border-bottom: 1px solid #131921;
-        z-index: 1;
-        padding-bottom: 20px;
-    }
+
+.footer-back-home {
+    padding-top: 20px;
+    background-color: #222e3b;
+    width: 100%;
+    border-bottom: 1px solid #131921;
+    z-index: 1;
+    padding-bottom: 30px;
 }
 .footer-back {
     background-color: #222e3b;

@@ -22,7 +22,7 @@ function SignUp() {
                                     <br />
                                     <input type="text" placeholder="Password" />
                                     <br /> 
-                                    <input type="submit" value="Get Started" />
+                                    <Link to="/Home"><input type="submit" value="Get Started" /></Link>
                                 </form>
                             </div>
                         </div>

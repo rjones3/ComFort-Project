@@ -24,6 +24,7 @@ function SignUp() {
                                     <br /> 
                                     <Link to="/Home"><input type="submit" value="Get Started" /></Link>
                                 </form>
+                                <p><Link to="/Home">BACK <i className="fas fa-chevron-right"></i></Link></p>
                             </div>
                         </div>
                     </div>

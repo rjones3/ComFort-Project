@@ -1,4 +1,13 @@
-/* https://avexdesigns.com/responsive-youtube-embed/ */
+/* font-family: 'Roboto', sans-serif; */
+/* font-family: 'Montserrat', sans-serif; */
+
+body {
+    font-family: 'Roboto', sans-serif;
+}
+h1, .h1, h2, .h2, h3, .h3 {
+    font-family: 'Montserrat', sans-serif; 
+    font-weight: 700;
+}
 .video-container {
     overflow: hidden;
     height: 800px;
@@ -118,7 +127,7 @@
         color: white;
         font-size: 90px;
         text-align: center;
-        width: 800px;
+        width: 900px;
     }
     .hero-button {
         color: white;
@@ -152,6 +161,8 @@
     border-bottom: 1px solid #131921;
 }
 .footer-list-struct li:first-child {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     margin-top: 15px;
     margin-bottom: 15px;
     font-size: 18px;
@@ -381,6 +392,8 @@
     text-align: center;   
 }
 .category-back a {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
     transition: font-size .5s;
     text-decoration: none;
     color: #555;

@@ -982,6 +982,11 @@ h1, .h1, h2, .h2, h3, .h3 {
     background-color: #dddddd6b;
     border: none;
 }
+.signin-form input[type="password"] {
+    padding-left: 10px;
+    background-color: #dddddd6b;
+    border: none;
+}
 .signin-form input[type="submit"] {
     background-color: white;
     border: 1px solid #f59505;
@@ -1031,6 +1036,11 @@ h1, .h1, h2, .h2, h3, .h3 {
         width: 90%;
     }
     .signin-form input[type="text"] {
+        padding-left: 10px;
+        background-color: #dddddd6b;
+        border: none;
+    }
+    .signin-form input[type="password"] {
         padding-left: 10px;
         background-color: #dddddd6b;
         border: none;

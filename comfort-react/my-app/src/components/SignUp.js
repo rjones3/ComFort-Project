@@ -20,7 +20,7 @@ function SignUp() {
                                     <br />
                                     <input type="text" placeholder="Username" />
                                     <br />
-                                    <input type="text" placeholder="Password" />
+                                    <input type="password" placeholder="Password" />
                                     <br /> 
                                     <Link to="/Home"><input type="submit" value="Get Started" /></Link>
                                 </form>

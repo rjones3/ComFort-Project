@@ -10,7 +10,7 @@ function Footer() {
                                 <ul className="footer-list-struct">
                                     <li>Learn About Us</li>
                                     <li><a href="#link">Contact Us</a></li>
-                                    <li><a href="#link">Careers</a></li>
+                                    <li className="hidden-xs"><a href="#link">Careers</a></li>
                                     <li className="hidden-xs"><a href="#link">Blog</a></li>
                                     <li><a href="#link">About ComFort</a></li>
                                     <li className="hidden-xs"><a href="#link">Become an Affiliate</a></li>
@@ -29,11 +29,11 @@ function Footer() {
                             </div>
                             <div className="col-sm-3 col-xs-6">
                                 <ul className="footer-list-struct">
-                                    <li>Furniture Restoration</li>
-                                    <li><a href="#link">Restore Your Couch</a></li>
-                                    <li className="hidden-xs"><a href="#link">Restore Your Chair</a></li>
-                                    <li className="hidden-xs"><a href="#link">Restore Your Table</a></li>
-                                    <li><a href="#link">Restore Your Bed</a></li>
+                                    <li>Room Categories</li>
+                                    <li><a href="http://localhost:3000/room/livingroom">Living Room</a></li>
+                                    <li><a href="http://localhost:3000/room/outdoor">Outdoors</a></li>
+                                    <li className="hidden-xs"><a href="http://localhost:3000/room/diningroom">Dining Room</a></li>
+                                    <li><a href="http://localhost:3000/room/bedroom">Bedroom</a></li>
                                     <li><a href="#link"><i className="fas fa-chevron-right"></i> See More</a></li>
                                 </ul>
                             </div>

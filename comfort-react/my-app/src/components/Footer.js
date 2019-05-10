@@ -55,7 +55,7 @@ function Footer() {
                         <div className="row">
                             <div className="col-sm-12">
                                 <div className="footer-lang">
-                                    <img src="https://placehold.it/100x100" alt="logo" />
+                                    <img src="/images/logo.png" alt="logo" height="100" width="100" />
                                     <a href="#link">English <i className="fas fa-chevron-down"></i></a>
                                     <a href="#link">United States <i className="fas fa-chevron-down"></i></a>
                                 </div>

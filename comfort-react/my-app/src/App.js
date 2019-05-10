@@ -7,6 +7,7 @@ import SignUp from './components/SignUp';
 import forgotPw from './components/forgotPw'
 import Products from './components/Products';
 import productSingle from './components/productSingle';
+import thankYou from './components/thankYou';
 import RoomSingle from './components/roomSingle';
 import Footer from './components/Footer';
 
@@ -22,6 +23,7 @@ class App extends Component {
           <Route path="/forgotPw" component={forgotPw} />
           <Route path="/Products" component={Products} />
           <Route path="/product/:slug" component={productSingle} />
+          <Route path="/thankYou" component={thankYou} />
           <Route path="/room/:name" component={RoomSingle} />
           <Route render={() => <Redirect to="/" />} />
         </Switch>

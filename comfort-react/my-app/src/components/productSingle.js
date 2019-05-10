@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom'
 
 class productSingle extends React.Component {
     
@@ -50,7 +51,7 @@ class productSingle extends React.Component {
                                 </div>
                                 <div className="product-single-buy">
                                     <a href="#link">Add to Cart</a>
-                                    <a href="#link">Buy Now</a>
+                                    <Link to="/thankYou">Buy Now</Link>
                                 </div>
                                 <div className="product-single-back">
                                     <a href="/Products">BACK <i className="fas fa-chevron-right"></i></a>

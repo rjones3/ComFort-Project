@@ -4,7 +4,9 @@ import { StateProvider } from './helpers/state'
 import Header from './components/Header';
 import Home from './components/Home';
 import Login from './components/Login';
+import Logout from './components/Logout'
 import SignUp from './components/SignUp';
+import Cart from './components/Cart';
 import forgotPw from './components/forgotPw'
 import Products from './components/Products';
 import productSingle from './components/productSingle';
@@ -48,7 +50,9 @@ function App() {
           <Switch>
             <Route exact={true} path="/" component={Home} />
             <Route path="/Login" component={Login} />
+            <Route path="/Logout" component={Logout} />
             <Route path="/SignUp" component={SignUp} />
+            <Route path="/Cart" component={Cart} />
             <Route path="/forgotPw" component={forgotPw} />
             <Route path="/Products" component={Products} />
             <Route path="/product/:slug" component={productSingle} />

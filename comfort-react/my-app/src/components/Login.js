@@ -1,21 +1,25 @@
 import React from 'react'
-import { Link } from 'react-router-dom'
+import { Link, Redirect } from 'react-router-dom'
 import { StateContext } from '../helpers/state'
 
 class Login extends React.Component {
+    static contextType = StateContext;
     constructor() {
         super()
         this.state = {
             username: '',
             password: '',
 
-            users: {
+            user: {
                 username: '',
                 password: ''
-            }
+            },
+
+            redirect: false
 
         }
         this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
     }
 
     handleChange(event) {
@@ -27,18 +31,35 @@ class Login extends React.Component {
 
     handleSubmit(event) {
         event.preventDefault();
+        const [ , dispatch] = this.context
         fetch('http://localhost:5000/api/user/')
         .then(results => results.json())
         .then(data => {
-            let users = data.find(user => {
-                return user.username === this.state.username ? user.username : null
+            let user = data.find(user => {
+                return (user.username === this.state.username && user.password === this.state.password) ? user : null
+                
             })
-            this.setState({users});
+            if (user) {
+                dispatch({
+                    type: 'changeUser',
+                    newUser: {
+                        username: this.state.username,
+                        loggedIn: true
+                    }
+                })
+                this.setState({redirect:true})
+            } else {
+                
+            }
         })
+
         
 
     }
     render() {
+        if (this.state.redirect) {
+            return <Redirect push to="/Products" />
+        }
         return (
             <>
                 <div className="signin-bg">
@@ -49,11 +70,11 @@ class Login extends React.Component {
                                     <form className="signin-form" action="#" onSubmit={this.handleSubmit}>
                                         <h1>LOGIN</h1>
                                         <br />
-                                        <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange}  />
+                                        <input type="text" placeholder="Username" name="username" value={this.state.username} onChange={this.handleChange}  required />
                                         <br />
-                                        <input type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} />
+                                        <input type="password" placeholder="Password" name="password" value={this.state.password} onChange={this.handleChange} required/>
                                         <br />
-                                        <Link to="/Home"><input type="submit" value="LOGIN" /></Link>
+                                        <input type="submit" value="LOGIN" />
                                         <br />
                                         <Link to="/forgotPw">Forgot Password?</Link>
                                     </form>

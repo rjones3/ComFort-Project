@@ -22,7 +22,7 @@ export default function AddtoCart(props) {
             })
         }}
         >
-        Add to cart
+        Add to Cart
         </button>
     );
 }

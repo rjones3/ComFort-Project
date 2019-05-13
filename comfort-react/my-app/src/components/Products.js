@@ -45,7 +45,7 @@ class Products extends React.Component {
             return (
                 <div key={product.id} className="product-slide">
                     <div className="product-pic" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
-                    <Link to={`product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</Link>
+                    <Link to={`product/${product.product_slug}`}>{product.product_name} <br/> Price: ${product.price}</Link>
                 </div>
             )
         })
@@ -148,25 +148,25 @@ class Products extends React.Component {
                     <div className="row">
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/livingroom">Living Room</a>
+                                <Link to="/room/livingroom">Living Room</Link>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/livingroombg.jpg')"}}></div>
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/diningroom">Dining Room</a>
+                                <Link to="/room/diningroom">Dining Room</Link>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/diningroombg.jpg')"}}></div>    
                             </div>
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/bedroom">Bedroom</a>
+                                <Link to="/room/bedroom">Bedroom</Link>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/bedroom.jpg')"}}></div>
                             </div>     
                         </div>
                         <div className="col-sm-3">
                             <div className="category-back">
-                                <a href="/room/outdoor">Outdoors</a>
+                                <Link to="/room/outdoor">Outdoors</Link>
                                 <div className="widgetbg" style={{backgroundImage: "url('/images/WidgetBG/outdoorbg.jpg')"}}></div>
                             </div>
                         </div>

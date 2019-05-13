@@ -137,6 +137,16 @@ h1, .h1, h2, .h2, h3, .h3 {
     margin-top: 11px;
     text-align: center;
 }
+.count {
+    position: relative;
+    font-size: 10px;
+    background: #ff0000;
+    color: #fff;
+    padding: 2px 5px;
+    margin-left: 4px;
+    transform: translateY(-49%);
+    display: inline-block;
+}
 .nav-list-struct a { 
     margin-right: 2px;
     padding: 5px 5px;
@@ -1096,14 +1106,26 @@ h1, .h1, h2, .h2, h3, .h3 {
         color:white;
     }
 }
-
-.count {
-    position: relative;
-    font-size: 10px;
-    background: #ff0000;
-    color: #fff;
-    padding: 2px 5px;
-    margin-left: 4px;
-    transform: translateY(-49%);
-    display: inline-block;
+/* Signed in */ 
+.logged-in {
+    margin-right: 2px;
+    padding: 5px 5px;
+    text-decoration: none;
+    color: white;
+    border: 1px solid white;
+    transition: .5s ease-in-out;
+}
+.logged-in:hover {
+    background-color: #f59505;
+    border: 1px solid #f59505;
+    color: white;
+}
+@media (min-width: 768px) {
+    .logged-in {
+        margin-right: 15px;
+        padding: 15px 15px;
+        float: right;
+        text-decoration: none;
+        color: white;
+    }
 }

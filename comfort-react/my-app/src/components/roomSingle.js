@@ -66,7 +66,7 @@ class RoomSingle extends React.Component {
             return (
                 <div key={product.id} className="room-slide">
                     <div className="room-product-pic" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
-                    <Link to={`../product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</Link>
+                    <Link to={`../product/${product.product_slug}`}>{product.product_name} <br/> Price: ${product.price}</Link>
                 </div>
             )
         })

@@ -51,8 +51,8 @@ class productSingle extends React.Component {
                                     <p>{product.product_desc}</p>
                                 </div>
                                 <div className="product-single-buy">
-                                     <AddtoCart id={product.id} />
-                                    <Link to="/thankYou">Buy Now</Link>
+                                    <AddtoCart id={product.id} />
+                                    <Link to="/thankYou"><input className='btn product-single-buy' value='Buy Now' type='button'/></Link>
                                 </div>
                                 <div className="product-single-back">
                                     <Link to="/Products">BACK <i className="fas fa-chevron-right"></i></Link>

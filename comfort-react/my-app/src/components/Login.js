@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { StateContext } from '../helpers/state'
 
 class Login extends React.Component {
     constructor() {

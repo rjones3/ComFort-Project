@@ -7,7 +7,7 @@ export default function AddtoCart(props) {
     
     return (
         <button
-        className='btn'
+        className='btn product-single-buy'
         onClick={() => {
             console.log('onclick',cart);
             

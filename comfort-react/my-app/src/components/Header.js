@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import { getState } from '../helpers/state'
-import Logout from './Logout'
 
 function Header() {
     const [{ cart, user }] = getState();

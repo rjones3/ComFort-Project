@@ -1,4 +1,5 @@
 import React from 'react' 
+import { Link } from 'react-router-dom'
 
 function Footer() {
     return (
@@ -30,10 +31,10 @@ function Footer() {
                             <div className="col-sm-3 col-xs-6">
                                 <ul className="footer-list-struct">
                                     <li>Room Categories</li>
-                                    <li><a href="http://localhost:3000/room/livingroom">Living Room</a></li>
-                                    <li><a href="http://localhost:3000/room/outdoor">Outdoors</a></li>
-                                    <li className="hidden-xs"><a href="http://localhost:3000/room/diningroom">Dining Room</a></li>
-                                    <li><a href="http://localhost:3000/room/bedroom">Bedroom</a></li>
+                                    <li><Link to="/room/livingroom">Living Room</Link></li>
+                                    <li><Link to="/room/outdoor">Outdoors</Link></li>
+                                    <li className="hidden-xs"><Link to="/room/diningroom">Dining Room</Link></li>
+                                    <li><Link to="/room/bedroom">Bedroom</Link></li>
                                     <li><a href="#link"><i className="fas fa-chevron-right"></i> See More</a></li>
                                 </ul>
                             </div>

@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
+import { Link } from 'react-router-dom'
 
 
 function searchingfor(term) {
@@ -44,7 +45,7 @@ class Products extends React.Component {
             return (
                 <div key={product.id} className="product-slide">
                     <div className="product-pic" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
-                    <a href={`product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</a>
+                    <Link to={`product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</Link>
                 </div>
             )
         })

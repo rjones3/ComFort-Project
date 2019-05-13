@@ -950,6 +950,10 @@ h1, .h1, h2, .h2, h3, .h3 {
     background: #ff9900cf;
     height: 625px;
 }
+.signup-bg {
+    background: #ff9900cf;
+    height: 800px;
+}
 .signin-bg a {
     color: #999;
     text-decoration: none;

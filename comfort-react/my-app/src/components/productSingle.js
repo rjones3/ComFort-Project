@@ -1,5 +1,6 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import AddtoCart from './AddtoCart'
 
 class productSingle extends React.Component {
     
@@ -50,7 +51,7 @@ class productSingle extends React.Component {
                                     <p>{product.product_desc}</p>
                                 </div>
                                 <div className="product-single-buy">
-                                    <a href="#link">Add to Cart</a>
+                                     <AddtoCart id={product.id} />
                                     <Link to="/thankYou">Buy Now</Link>
                                 </div>
                                 <div className="product-single-back">

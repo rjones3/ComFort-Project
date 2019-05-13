@@ -1,5 +1,6 @@
 import React from 'react'
 import Slider from "react-slick";
+import { Link } from 'react-router-dom'
 
 function searchingfor(term) {
     return function(product) {
@@ -65,14 +66,14 @@ class RoomSingle extends React.Component {
             return (
                 <div key={product.id} className="room-slide">
                     <div className="room-product-pic" style={{backgroundImage: `url('/images/Products/${product.product_slug}.jpg')`}}></div>
-                    <a href={`../product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</a>
+                    <Link to={`../product/${product.product_slug}`}>{product.product_name} <br/> Price: {product.price}</Link>
                 </div>
             )
         })
 
         let searchResults = this.state.searchResults.map( product =>
             <div key={product.id}>
-                <a href={`../product/${product.product_slug}`}>{product.product_name}</a>
+                <Link to={`../product/${product.product_slug}`}>{product.product_name}</Link>
             </div>
         )
 
@@ -94,7 +95,7 @@ class RoomSingle extends React.Component {
                         <div className="search-container">
                             <div className="search-bar">
                                 <input type="text" placeholder="Search Here" value={this.state.searchinput} onChange={this.searchfor}  />
-                                <a href="#link"><i className="fas fa-search"></i></a>  
+                                <Link to="#link"><i className="fas fa-search"></i></Link>  
                             </div>
                             <div className="search-bar-results">{searchResults}</div>
                         </div>
@@ -133,7 +134,7 @@ class RoomSingle extends React.Component {
                     <div className="row">
                         <div className="col-sm-12">
                             <div className="room-back">
-                                <a href="/Products">BACK <i className="fas fa-chevron-right"></i></a>
+                                <Link to="/Products">BACK <i className="fas fa-chevron-right"></i></Link>
                             </div>
                         </div>
                     </div>

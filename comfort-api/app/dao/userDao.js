@@ -52,7 +52,7 @@ class UserDao {
     }
 
     create(Users) {
-        let sqlRequest = "INSERT into Users (username, password, fname, lname, dob, phone, email) " + "VALUES ($username, $password, $fname, $lname, $dob, $phone, $email)";
+        let sqlRequest = "INSERT into Users (username, password, fname, lname, dob, phone, email)" + "VALUES ($username, $password, $fname, $lname, $dob, $phone, $email)";
 
         let sqlParams = {
 

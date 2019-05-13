@@ -9,7 +9,7 @@ function Header() {
                     <div className="row">
                         <div className="nav-front">
                             <div className="col-sm-4 col-xs-6">
-                                <a href="/"><img className="img-responsive" src="/images/logo.png" alt="Logo" /></a>
+                                <Link to="/"><img className="img-responsive" src="/images/logo.png" alt="Logo" /></Link>
                             </div>
                             <div className="col-sm-8 col-xs-6">
                                 <ul className="nav-list-struct center-text">

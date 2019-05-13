@@ -1,7 +1,9 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import { getState } from '../helpers/state'
 
 function Header() {
+    const [{ cart }] = getState();
     return (
         <>
             <div className="nav-mid">
@@ -15,6 +17,12 @@ function Header() {
                                 <ul className="nav-list-struct center-text">
                                     <li><Link to="/SignUp">Sign Up</Link></li>
                                     <li><Link to="/Login">Log in</Link></li>
+                                    <li>
+                                        <Link to="/Cart">
+                                        <i class="fa fa-shopping-cart"></i>
+                                        { cart.items.length ? <span className="count">{cart.items.length}</span> : ''}
+                                        </Link>
+                                    </li>
                                 </ul>
                             </div>
                         </div>

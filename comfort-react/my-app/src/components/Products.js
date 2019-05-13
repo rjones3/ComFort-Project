@@ -52,7 +52,7 @@ class Products extends React.Component {
 
         let searchResults = this.state.searchResults.map( product =>
             <div key={product.id}>
-                <a href={`product/${product.product_slug}`}>{product.product_name}</a>
+                <Link to={`product/${product.product_slug}`}>{product.product_name}</Link>
             </div>
         )
 

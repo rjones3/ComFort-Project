@@ -52,6 +52,7 @@ function App() {
           <Header />
           <Switch>
             <Route exact={true} path="/" component={Home} />
+            <Route path="/Home" component={Home} />
             <Route path="/Login" component={Login} />
             <Route path="/profile/:username" component={userProfile} />
             <Route path="/changePassword" component={changePassword} />

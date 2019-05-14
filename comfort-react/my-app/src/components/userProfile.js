@@ -43,6 +43,7 @@ class userProfile extends React.Component {
         console.log(user.username)
         return (
             <>
+            {userPage ?
                 <div className="product-single-bg">
                     <div className="container">
                         <div className="row">
@@ -72,6 +73,22 @@ class userProfile extends React.Component {
                         </div>
                     </div>
                 </div>
+            :
+            <div className="product-single-bg">
+                    <div className="container">
+                        <div className="row">
+                            <div className="col-sm-12">
+                                <div className="product-single-ds">
+                                    <h1>No User Found...</h1>
+                                </div>
+                                <div className="product-single-buy">
+                                    <Link to="/Home">Return Home</Link>
+                                </div>
+                            </div>  
+                        </div>
+                    </div>
+                </div>
+            }
             </>
         )
     }

@@ -68,7 +68,7 @@ class UserDao {
     };
 
     update(Users) {
-        let sqlRequest = "UPDATE Users SET id=$id, fname=$fname, lname=$lname, dob=$dob, phone=$phone, email=$email";
+        let sqlRequest = "UPDATE Users SET id=$id, username=$username, password=$password, fname=$fname, lname=$lname, dob=$dob, phone=$phone, email=$email WHERE username=$username";
 
         let sqlParams = {
             $id: Users.id,

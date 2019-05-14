@@ -11,6 +11,7 @@ class Login extends React.Component {
             password: '',
 
             user: {
+                id: '',
                 username: '',
                 password: ''
             },
@@ -43,13 +44,15 @@ class Login extends React.Component {
                 dispatch({
                     type: 'changeUser',
                     newUser: {
+                        id: this.state.id,
                         username: this.state.username,
+                        password: this.state.password,
                         loggedIn: true
                     }
                 })
                 this.setState({redirect:true})
             } else {
-                
+                alert('Invalid Username and Password')
             }
         })
 

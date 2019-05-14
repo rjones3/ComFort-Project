@@ -24,7 +24,7 @@ function Header() {
                                 {
                                     user.loggedIn ? <>
                                                         <li><Link to="/Logout">Log Out</Link></li>
-                                                        <li className="logged-in">{`Welcome ${user.username}!`}</li>
+                                                        <li><Link to={`profile/${user.username}`}> Welcome {user.username}!</Link></li>
                                                     </>
                                 :
                                                     <>

@@ -20,7 +20,7 @@ router.post('/create', function (req, res) {
     usercontroller.create(req, res);
 });
 
-router.put('/edit/:id', function (req, res) {
+router.put('/edit/:username', function (req, res) {
     usercontroller.update(req, res);
 });
 

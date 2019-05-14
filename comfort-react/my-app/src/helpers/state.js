@@ -6,3 +6,5 @@ export const StateProvider = ({reducer, initialState, children}) => (
     </StateContext.Provider>
 );
 export const getState = () => useContext(StateContext);
+
+// Handling Global State without Redux

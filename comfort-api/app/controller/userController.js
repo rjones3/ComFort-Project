@@ -51,7 +51,7 @@ class UserController {
         user.phone = req.body.phone;
         user.email = req.body.email;
 
-        return this.userDao.create(user)
+        return this.userDao.update(user)
             .then(this.common.findSuccess(res))
             .catch(this.common.findError(res));
     }

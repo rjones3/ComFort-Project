@@ -6,6 +6,8 @@ import Home from './components/Home';
 import Login from './components/Login';
 import Logout from './components/Logout'
 import SignUp from './components/SignUp';
+import userProfile from './components/userProfile';
+import changePassword from './components/changePassword';
 import Cart from './components/Cart';
 import forgotPw from './components/forgotPw'
 import Products from './components/Products';
@@ -19,7 +21,9 @@ import Footer from './components/Footer';
 function App() {
   const initialState = {
     user: {
+      id: '',
       username: '',
+      password: '',
       loggedIn: false
     },
     cart: { items: [] }
@@ -42,7 +46,6 @@ function App() {
     }
   }
 
-
     return (
       <StateProvider initialState={initialState} reducer={reducer}>
         <Router>
@@ -50,6 +53,8 @@ function App() {
           <Switch>
             <Route exact={true} path="/" component={Home} />
             <Route path="/Login" component={Login} />
+            <Route path="/profile/:username" component={userProfile} />
+            <Route path="/changePassword" component={changePassword} />
             <Route path="/Logout" component={Logout} />
             <Route path="/SignUp" component={SignUp} />
             <Route path="/Cart" component={Cart} />
